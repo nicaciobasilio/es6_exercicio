@@ -31,7 +31,11 @@ var alunos = [{
   nome: 'Rafaela',
   nota: 3.5
 }];
-var alunosAcimaDaMedia = alunos.filter(function (notaItem) {
-  return notaItem.nota >= 6;
-});
-console.log(alunosAcimaDaMedia);
+function filtrarNotas(alunos) {
+  var alunosAcimaDaMedia = alunos.filter(function (notaItem) {
+    return notaItem.nota >= 6;
+  });
+  return alunosAcimaDaMedia;
+}
+var alunosFiltrados = filtrarNotas(alunos);
+console.log(alunosFiltrados);
